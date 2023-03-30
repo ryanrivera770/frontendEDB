@@ -13,11 +13,12 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import PeopleIcon from '@mui/icons-material/People';
-import HelpCenterIcon from '@mui/icons-material/HelpCenter';
+import HelpIcon from '@mui/icons-material/Help';
+import TemporaryDrawer from './sidebar';
 
 
  
-const pages = ['Departments', 'People', 'Projects', 'Resources', 'Budget', <HelpCenterIcon/>]
+const pages = ['Departments', 'People', 'Projects', 'Resources', 'Budget', <HelpIcon style={{ marginTop: '5px' }}/>]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
@@ -46,9 +47,9 @@ function ResponsiveAppBar() {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
             
+        <TemporaryDrawer/>
         
-        
-        <PeopleIcon style={{minWidth: '40px'}}/>
+        <PeopleIcon style={{minWidth: '40px', marginLeft: '40px'}}/>
           <Typography
             variant="h5"
             noWrap
